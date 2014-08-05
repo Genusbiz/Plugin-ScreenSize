@@ -22,8 +22,7 @@
             if (action.equals("getSize")) {
 
                 DisplayMetrics metrics = new DisplayMetrics();
-                Context context = new Context();
-                WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+                WindowManager windowManager = (WindowManager) Context.getSystemService(Context.WINDOW_SERVICE);
                 windowManager.getDefaultDisplay().getMetrics(metrics);
                
 
