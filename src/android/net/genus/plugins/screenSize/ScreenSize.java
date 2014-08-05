@@ -22,7 +22,7 @@
             if (action.equals("getSize")) {
 
                 DisplayMetrics metrics = new DisplayMetrics();
-                Context context;
+                Context context = this.cordova.getActivity().getApplicationContext();;
                 WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
                 windowManager.getDefaultDisplay().getMetrics(metrics);
                
