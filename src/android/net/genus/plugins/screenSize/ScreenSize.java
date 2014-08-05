@@ -2,7 +2,7 @@
 
     import org.apache.cordova.CordovaPlugin;
     import org.apache.cordova.CallbackContext;
-    
+
     import android.util.DisplayMetrics;
     import android.view.WindowManager;
     import android.content.Context;
@@ -22,6 +22,7 @@
             if (action.equals("getSize")) {
 
                 DisplayMetrics metrics = new DisplayMetrics();
+                Context context = new Context();
                 WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
                 windowManager.getDefaultDisplay().getMetrics(metrics);
                
