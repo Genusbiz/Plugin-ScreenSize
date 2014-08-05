@@ -38,10 +38,10 @@
                 double y = Math.pow(hi,2);
                 double screenInches = Math.sqrt(x+y);
 
-                Log.d('ScreenSizeDebug', screenInches);
+                Log.d("ScreenSizeDebug", ""+screenInches);
                 int result = (int) screenInches;
 
-                Log.d('ScreenSizeDebug', result);
+                Log.d("ScreenSizeDebug", ""+result);
                 callbackContext.success(result);
 
                 
