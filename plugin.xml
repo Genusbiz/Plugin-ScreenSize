@@ -19,7 +19,7 @@
 
     <!-- android -->
     <platform name="android">
-        <source-file src="src/android/ScreenSize.java" target-dir="src/net/genus/screenSize" />
+        <source-file src="src/android/ScreenSize.java" target-dir="src/net/genus/screenSize/" />
         
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="ScreenSize">
