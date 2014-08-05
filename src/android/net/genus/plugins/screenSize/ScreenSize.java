@@ -2,6 +2,7 @@
 
     import org.apache.cordova.CordovaPlugin;
     import org.apache.cordova.CallbackContext;
+    import android.util.DisplayMetrics;
 
     import org.json.JSONArray;
     import org.json.JSONException;
