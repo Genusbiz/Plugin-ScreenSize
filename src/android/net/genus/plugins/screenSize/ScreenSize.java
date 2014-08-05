@@ -3,7 +3,9 @@
     import org.apache.cordova.CordovaPlugin;
     import org.apache.cordova.CallbackContext;
     import android.util.DisplayMetrics;
+    import android.view.WindowManager;
 
+    
     import org.json.JSONArray;
     import org.json.JSONException;
     import org.json.JSONObject;
