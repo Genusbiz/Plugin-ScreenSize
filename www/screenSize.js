@@ -1,7 +1,9 @@
 (function(window){
     
     window.screenSize = function(str, callback) {
-        cordova.exec(callback, function(err) {
+        cordova.exec(function(winParam) {
+        	alert(winParam);
+        }, function(err) {
             callback('Something went wrong.');
         }, "ScreenSize", "getSize", [str]);
     };    
