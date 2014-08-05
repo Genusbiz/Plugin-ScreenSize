@@ -13,7 +13,7 @@
     public class ScreenSize extends CordovaPlugin {
 
         @Override
-        public double execute(String action, JSONArray args, CallbackContext callbackContext) {
+        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
             if (action.equals("getSize")) {
 
                 DisplayMetrics dm = new DisplayMetrics();
@@ -27,8 +27,10 @@
                 double y = Math.pow(hi,2);
                 double screenInches = Math.sqrt(x+y);
 
-                return screenInches;
+                callbackContext.success(screenInches);
+                
+                return true;
             }
-            return -1;
+            return false;
         }
     }
