@@ -38,7 +38,7 @@
                 double y = Math.pow(hi,2);
                 double screenInches = Math.sqrt(x+y);
 
-                callbackContext.success(screenInches);
+                callbackContext.success((int) screenInches);
                 
                 return true;
             }
