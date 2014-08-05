@@ -5,7 +5,7 @@
     version="0.0.1">
 
     <name>Android Screensize</name>
-    <description>Returns the physical screen size (diameter)</description>
+    <description>Returns the physical screen size (diameter) in inches</description>
     <author>Genus AS</author>
     <license>MIT</license>
     
@@ -19,7 +19,7 @@
 
     <!-- android -->
     <platform name="android">
-        <source-file src="src/android/ScreenSize.java" target-dir="src/net/genus/screenSize/" />
+        <source-file src="src/android/net/genus/plugins/screenSize/ScreenSize.java" target-dir="src/net/genus/plugins/screenSize/" />
         
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="ScreenSize">
