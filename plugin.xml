@@ -7,18 +7,25 @@
     <name>Android Screensize</name>
     <description>Returns the physical screen size (diameter)</description>
     <author>Genus AS</author>
-    <license>Apache 2.0 License</license>
+    <license>MIT</license>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
 
-    <asset src="www/screenSize.js" target="screenSize.js" />
+    <js-module src="www/screenSize.js" name="screenSize">
+        <clobbers target="cordova.plugins.screenSize" />
+    </js-module>
 
     <!-- android -->
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/plugins">
-            <plugin name="ScreenSize"
-                value="com.genus.ScreenSize"/>
+        <source-file src="src/android/ScreenSize.java" target-dir="src/org/apache/cordova/plugins" />
+        
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ScreenSize">
+                <param name="android-package" value="com.genus.ScreenSize"/>
+            </feature >
         </config-file>
        
-        <source-file src="src/android/ScreenSize.java"
-                target-dir="src/org/apache/cordova/plugins" />
     </platform>
 </plugin>
