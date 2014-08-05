@@ -17,11 +17,12 @@
         public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
             if (action.equals("getSize")) {
 
-                DisplayMetrics dm = new DisplayMetrics();
-                getWindowManager().getDefaultDisplay().getMetrics(dm);
-                int width=dm.widthPixels;
-                int height=dm.heightPixels;
-                int dens=dm.densityDpi;
+                DisplayMetrics metrics = new DisplayMetrics();
+                WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+                windowManager.getDefaultDisplay().getMetrics(metrics);
+                int width=metrics.widthPixels;
+                int height=metrics.heightPixels;
+                int dens=metrics.densityDpi;
                 double wi=(double)width/(double)dens;
                 double hi=(double)height/(double)dens;
                 double x = Math.pow(wi,2);
