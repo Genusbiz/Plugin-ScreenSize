@@ -5,7 +5,9 @@ var exec = require('cordova/exec');
 var screenSize = function(window) {
 
 	window.screenSize = function(str, callback) {
-		exec(null, 
+		exec(function(result) {
+				callback(result);
+			}, 
 			function(err) {
 		    	console.log("SOMETHING WENT WRONG");
 		        callback('Something went wrong.');
