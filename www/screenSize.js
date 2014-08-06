@@ -2,11 +2,13 @@
 var exec = require('cordova/exec');
 
 
-var screenSize = function(window) {
+var screenSize = function() {
 
-	window.screenSize = function() {
-		return exec(function(result) {
+
+	var calcScreenSize = function() {
+		exec(function(result) {
 				console.log("Got result from native: " + result);
+				window.screenSize = result;
 				return result;
 			}, 
 			function(err) {
@@ -19,8 +21,9 @@ var screenSize = function(window) {
 		);
 
 	}  
-
+	calcScreenSize();
+	
 }
-screenSize(window);
+screenSize();
 
 //module.exports = screenSize;
