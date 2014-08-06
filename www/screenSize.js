@@ -6,6 +6,7 @@ var screenSize = function(window) {
 
 	window.screenSize = function() {
 		exec(function(result) {
+				console.log("Got result from native: " + result);
 				return result;
 			}, 
 			function(err) {
