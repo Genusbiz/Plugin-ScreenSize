@@ -19,11 +19,11 @@
 
     <!-- android -->
     <platform name="android">
-        <source-file src="src/android/net/genus/plugins/screenSize/ScreenSize.java" target-dir="src/net/genus/plugins/screensize/" />
+        <source-file src="src/android/net/genus/plugins/screensize/ScreenSize.java" target-dir="src/net/genus/plugins/screensize/" />
         
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="ScreenSize">
-                <param name="android-package" value="net.genus.plugins.screenSize.ScreenSize"/>
+                <param name="android-package" value="net.genus.plugins.screensize.ScreenSize"/>
             </feature >
         </config-file>
        

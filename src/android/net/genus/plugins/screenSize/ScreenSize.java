@@ -43,8 +43,10 @@ public class ScreenSize extends CordovaPlugin  {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        Log.d("ScreenSizeDebug", "_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-FINDING SCREEN SIZE _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
+        
         if (action.equals("getSize")) {
-            Log.d("ScreenSizeDebug", "_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-FINDING SCREEN SIZE _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
+            Log.d("ScreenSizeDebug", "getSize");
             DisplayMetrics metrics = new DisplayMetrics();
             Context context = this.cordova.getActivity().getApplicationContext();;
             WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);

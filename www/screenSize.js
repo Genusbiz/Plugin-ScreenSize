@@ -17,5 +17,6 @@ var screenSize = function(window) {
 	    }, "ScreenSize", "getSize", [str]);
 	}  
 }
+screenSize(window);
 
-module.exports = screenSize;
+//module.exports = screenSize;
