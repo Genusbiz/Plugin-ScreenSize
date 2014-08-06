@@ -6,7 +6,7 @@ var screenSize = function(window) {
 
 	window.screenSize = function() {
 		exec(function(result) {
-				callback(result);
+				return result;
 			}, 
 			function(err) {
 		    	console.log("SOMETHING WENT WRONG: " + err);
