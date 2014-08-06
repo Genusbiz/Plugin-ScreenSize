@@ -13,7 +13,7 @@
         <engine name="cordova" version=">=3.0.0" />
     </engines>
 
-    <js-module src="www/screenSize.js" name="screenSize">
+    <js-module src="www/screensize.js" name="screensize">
         <clobbers target="cordova.plugins.screensize" />
     </js-module>
 
