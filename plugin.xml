@@ -14,7 +14,7 @@
     </engines>
 
     <js-module src="www/screenSize.js" name="screenSize">
-        <clobbers target="genus.plugins.screensize" />
+        <clobbers target="cordova.plugins.screensize" />
     </js-module>
 
     <!-- android -->
@@ -23,7 +23,7 @@
         
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="ScreenSize">
-                <param name="android-package" value="net.genus.plugins.screensize"/>
+                <param name="android-package" value="net.genus.plugins.screenSize.ScreenSize"/>
             </feature >
         </config-file>
        
