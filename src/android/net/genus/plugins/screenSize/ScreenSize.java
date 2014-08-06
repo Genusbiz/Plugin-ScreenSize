@@ -43,33 +43,38 @@ public class ScreenSize extends CordovaPlugin  {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        Log.d("ScreenSizeDebug", "_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-FINDING SCREEN SIZE _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
-        
         if (action.equals("getSize")) {
             Log.d("ScreenSizeDebug", "getSize");
             DisplayMetrics metrics = new DisplayMetrics();
-            Context context = this.cordova.getActivity().getApplicationContext();;
+            Context context = this.cordova.getActivity().getApplicationContext();
             WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
             windowManager.getDefaultDisplay().getMetrics(metrics);
            
-
-            int width=metrics.widthPixels;
-            int height=metrics.heightPixels;
-            int dens=metrics.densityDpi;
+            Log.d("ScreenSizeDebug", "Pixles wide: "+ metrics.widthPixels);
+            Log.d("ScreenSizeDebug", "Pixels high: "+ metrics.heightPixels);
+            Log.d("ScreenSizeDebug", "DPI Density: "+ metrics.densityDpi);
+            
+            int width  =metrics.widthPixels;
+            int height =metrics.heightPixels;
+            int dens   =metrics.densityDpi;
             
 
             double wi=(double)width/(double)dens;
             double hi=(double)height/(double)dens;
+
+            Log.d("ScreenSizeDebug", "Width:  "+ wi);
+            Log.d("ScreenSizeDebug", "Height: "+ hi);
+
             double x = Math.pow(wi,2);
             double y = Math.pow(hi,2);
+            
             double screenInches = Math.sqrt(x+y);
-
-            Log.d("ScreenSizeDebug", ""+screenInches);
+            Log.d("ScreenSizeDebug", "Screen size: "+screenInches);
+            
             int result = (int) screenInches;
-
             Log.d("ScreenSizeDebug", ""+result);
-            callbackContext.success(result);
 
+            callbackContext.success(result);
             
             return true;
         }
