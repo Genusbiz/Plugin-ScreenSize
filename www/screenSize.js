@@ -12,7 +12,8 @@ var screenSize = function(window) {
 		    	console.log("SOMETHING WENT WRONG: " + err);
 		    }, 
 		    "ScreenSize", 
-		    "getSize"
+		    "getSize",
+		    []
 		);
 	}  
 }
