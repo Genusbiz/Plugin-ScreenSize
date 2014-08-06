@@ -14,4 +14,4 @@ var screenSize = function() {
 	}  
 }
 
-module.exports(screenSize);
+module.exports = screenSize;
