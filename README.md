@@ -1,7 +1,16 @@
 #Cordova screen size plugin for Android
 
-Plugin to get the physical screen size (diagonal) of the Android device.
+Android ScreenSize
  
+##Install
+
+cordova plugin add net.genus.plugins.screensize
+
+###Source
+
+https://github.com/Jonasei/Plugin-ScreenSize
+
+
 ## Usage
 
 	// Returns the diagonal length of the device.
@@ -18,7 +27,7 @@ Plugin to get the physical screen size (diagonal) of the Android device.
 
 ## Notes
 
-This plugin use DisplayMetrics withPixels, heightPixels and densityDpi to calculate the size. It is not 100% correct, but will give an approximation.
+This plugin use DisplayMetrics widthPixels, heightPixels and densityDpi to calculate the size. This means it does not include the button row or status bar as screen space.
 
 ##License
 
