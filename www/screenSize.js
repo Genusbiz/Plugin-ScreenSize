@@ -7,6 +7,7 @@ var screenSize = function() {
 
 	var calcScreenSize = function() {
 		exec(function(result) {
+				result = result/1000;
 				console.log("Got result from native: " + result);
 				window.screenSize = result;
 				return result;

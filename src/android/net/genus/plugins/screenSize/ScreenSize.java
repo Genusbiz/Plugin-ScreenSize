@@ -71,6 +71,8 @@ public class ScreenSize extends CordovaPlugin  {
             double screenInches = Math.sqrt(x+y);
             Log.d("ScreenSizeDebug", "Screen size: "+screenInches);
             
+            screenInches = screenInches * 1000;
+            
             int result = (int) screenInches;
             Log.d("ScreenSizeDebug", ""+result);
 
