@@ -21,9 +21,11 @@ var screenSize = function() {
 		);
 
 	}  
-	calcScreenSize();
-	
+
+	if(!window.screenSize)
+		calcScreenSize();
+
 }
+
 screenSize();
 
-//module.exports = screenSize;
